@@ -1,0 +1,13 @@
+node_modules/
+integration_test/screenshots/
+*.DS_Store
+temp
+dist
+config.local.json
+local-screenshots/
+*.swp
+*.swn
+*.swo
+tmp/
+runtime.iml
+npm-debug.log

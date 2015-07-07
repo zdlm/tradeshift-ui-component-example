@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tradeshift UI Component</title>
+	<script src="//d5wfroyti11sa.cloudfront.net/prod/client/ts-2.1.4.min.js?internal" type="text/javascript"></script>
+</head>
+<body>
+	<header ts-topbar></header>
+	<aside ts-drawer id="mydrawer" ts.title="My Drawer">
+		<div ts-panel> ... </div>
+		<div ts-footer class="ts-show-mobile-only"> ... </div>
+	</aside>
+
+	<main ts-main>
+		<div ts-toolbar id="mytoolbar"></div>
+		<h1>Main content</h1>
+		<div>
+			<h2>Drawer</h2>
+			<button ts-button class="ts-primary" id="btn-show-drawer">
+				<span>show drawer</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-close-drawer">
+				<span>close drawer</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-toggle-drawer">
+				<span>toggle drawer</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-add-header">
+				<span>add header</span>
+			</button>
+		</div>
+		<div>
+			<h2>Asides</h2>
+			<button ts-button class="ts-primary" id="btn-show-aside">
+				<span>show aside</span>
+			</button>
+		</div>
+		<div>
+			<h2>Button</h2>
+			<button ts-button>
+				<span>Default Button</span>
+			</button>
+			<button ts-button class="ts-primary">
+				<span>Primary</span>
+			</button>
+			<button ts-button class="ts-secondary">
+				<span>Secondary</span>
+			</button>
+			<button ts-button class="ts-tertiary">
+				<span>Tertiary</span>
+			</button>
+			<button ts-button class="ts-primary">
+				<span style="display:none;">Hidden In Mobile</span>
+				<i class="ts-icon-arrowright"></i>
+			</button>
+			<button ts-button class="ts-primary">
+				<span class="ts-hide-mobile-only">Hidden In Mobile</span>
+				<i class="ts-show-mobile-only ts-icon-arrowright"></i>
+			</button>
+		</div>
+		<h2>Buttons</h2>
+		<div style="width:500px">
+			<menu ts-buttons>
+				<li>
+					<button>
+						<span>Button One</span>
+					</button>
+				</li>
+				<li>
+					<button>
+						<span>Button Two</span>
+					</button>
+				</li>
+			</menu>
+			<menu ts-buttons class="ts-t-t ts-join">
+				<li>
+					<button class="ts-primary">
+						<span>Accept</span>
+					</button>
+				</li>
+				<li>
+					<button class="ts-danger">
+						<span>Reject</span>
+					</button>
+				</li>
+			</menu>
+		</div>
+		<h2>Company Card</h2>
+		<button ts-button class="ts-primary" id="btn-show-card">
+			<span>render card</span>
+		</button>
+		<div ts-companycard id="mycard">
+		</div>
+		<h2>Form</h2>
+		<form ts-form>
+			<fieldset>
+				<label>
+					<span>Textarea</span>
+					<textarea></textarea>
+				</label>
+				
+			</fieldset>
+			<fieldset>
+				<label>
+					<span>Text</span>
+					<input type="text"/>
+				</label>
+				
+			</fieldset>
+			<fieldset>
+				<label>
+					<span>Number</span>
+					<input type="number"/>
+				</label>
+				
+			</fieldset>
+			<fieldset>
+				<label>
+					<span>日期</span>
+					<input type="date" 
+						value="2015-01-01" 
+						min="2014-01-01" 
+						max="2016-01-01"/>
+				</label>
+			</fieldset>
+			<fieldset>
+				<label>
+					<span>Select</span>
+					<select>
+						<option value="a" selected>One</option>
+						<option value="b">Two</option>
+						<option value="c">Three</option>
+					</select>
+				</label>
+			</fieldset>
+			<fieldset>
+				<label>
+					<span>Select multiple</span>
+					<select multiple>
+						<option value="a" selected>One</option>
+						<option value="b" selected>Two</option>
+						<option value="c">Three</option>
+						<option value="d">Four</option>
+						<option value="e">Five</option>
+					</select>
+				</label>
+			</fieldset>
+			<fieldset>
+				<span>Legally Binding Contract</span>
+				<label>
+					<input type="checkbox"/>
+					<span>I agree to something</span>
+				</label>
+				<label>
+					<input type="checkbox" checked/>
+					<span>I agree to something (by default)</span>
+				</label>
+			</fieldset>
+			<fieldset>
+				<span>Settings Page</span>
+				<label>
+					<span>Secret Feature</span>
+					<input type="checkbox"/>
+				</label>
+				<label>
+					<span>Secret Feature (On by default)</span>
+					<input type="checkbox" checked/>
+				</label>
+			</fieldset>
+			<fieldset>
+				<label class="ts-error">
+					<span>Text</span>
+					<input type="text" />
+				</label>
+			</fieldset>
+			<fieldset>
+				<label class="ts-error">
+					<span>Text</span>
+					<input type="text" />
+				</label>
+				<dl class="ts-errors">
+					<dt>Text</dt>
+					<dd>An explanation of the error in question</dd>
+					<dd>Another explanation of the error in question</dd>
+				</dl>
+			</fieldset>
+		</form>
+		<h2>Menu</h2>
+		<menu ts-menu>
+			<li class="ts-checked">
+				<button>
+					<span>Item One</span>
+					<i class="ts-icon-rating"></i>
+				</button>
+			</li>
+			<li>
+				<button>
+					<span>Item Two</span>
+					<i class="ts-icon-rating"></i>
+				</button>
+			</li>
+			<li>
+				<button>
+					<span>Item Three</span>
+					<i class="ts-icon-rating"></i>
+				</button>
+			</li>
+		</menu>
+		<h2>Toolbar</h2>
+		<div>
+			<button ts-button class="ts-primary" id="btn-toolbar-title">
+				<span>toolbar title</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-toolbar-search">
+				<span>toolbar search</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-toolbar-button">
+				<span>toolbar button</span>
+			</button>
+		</div>
+		<h2>DatePicker</h2>
+		<div>
+			<button ts-button class="ts-primary" id="btn-date-picker">
+				<span>Date Picker</span>
+			</button>
+		</div>
+		<h2>Notification</h2>
+		<div>
+			<button ts-button class="ts-primary" id="btn-notice-success">
+				<span>success</span>
+			</button>
+			<button ts-button class="ts-secondary" id="btn-notice-info">
+				<span>info</span>
+			</button>
+			<button ts-button class="ts-tertiary" id="btn-notice-warning">
+				<span>warning</span>
+			</button>
+			<button ts-button class="ts-danger" id="btn-notice-error">
+				<span>error</span>
+			</button>
+		</div>
+		<h2>TopBar</h2>
+		<div>
+			<button ts-button class="ts-primary" id="btn-show-topbar">
+				<span>show topbar</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-navigate-topbar">
+				<span>Navigate topbar</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-topbar-tabs">
+				<span>topbar tab</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-add-tabs">
+				<span>add tab</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-select-tab">
+				<span>select tab</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-topbar-buttons">
+				<span>topbar buttons</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-add-button">
+				<span>add button</span>
+			</button>
+			<button ts-button class="ts-primary" id="btn-disable-button">
+				<span>disable button</span>
+			</button>
+		</div>
+	</main>
+	<aside ts-aside ts.open="false" ts.title="Aside Header" id="myaside">
+		<div ts-panel>
+			<p>Aside content</p>
+		</div>
+	</aside>
+	<footer ts-toolbar></footer>
+	
+	<script type="text/javascript">
+		ts.ui.ready(
+			function(){
+				var show_drower = function(){
+					var drawer = ts.ui.get("#mydrawer");
+					drawer.open();
+				};
+				var close_drower = function(){
+					var drawer = ts.ui.get("#mydrawer");
+					drawer.close();
+				};
+				var toggle_drower = function(){
+					var drawer = ts.ui.get("#mydrawer");
+					drawer.toggle();
+				};
+				var add_header = function(){
+					var drawer = gui.get('#mydrawer');
+					var header = drawer.header();
+					header.buttons.push({
+						icon: 'ts-icon-add',
+						onclick: function() {
+							gui.get('#myaside').toggle();
+						}
+					});
+				};
+				var aside_demo = function(){
+					var aside = ts.ui.get('#myaside');
+					aside.open();
+				};
+				var card_demo = function(){
+					var card = ts.ui.get("#mycard");
+					card.render({
+						id: "6bf17754-f9de-4e31-aa31-bd3ff765b9c2",
+						data: {
+							name: "Tradeshift",
+							logo: "images/logo.png",
+							size: '100–249',
+							location: "San Francisco, California",
+							industry: 'Software & IT',
+							connection: 2
+						}
+					});
+				};
+				var toolbar_title = function(){
+					var toolbar = ts.ui.get("mytoolbar");
+					toolbar.title("My Toolbar");
+				};
+
+				var toolbar_search = function(){
+					var toolbar = ts.ui.get("mytoolbar");
+					toolbar.search({
+						value: 'Try it now!',
+						onsearch: function(value) {
+							ts.ui.Notification.success(value || 'Search cleared');
+						}
+					});
+				};
+				
+				var toolbar_button = function(){
+					var toolbar = ts.ui.get("mytoolbar");
+					toolbar.buttons([{
+						label: 'Button',
+						type: 'ts-primary',
+						onclick: function() {
+							ts.ui.Notification.success(this.label);
+						}
+					}]);
+				};
+
+				var date_picker_demo = function(){
+					// ts.ui.DatePicker.localize({
+					// 	firstDay: 1,
+					// 	monthNames: [
+					// 		'一月',
+					// 		'二月',
+					// 		'三月',
+					// 		'四月',
+					// 		'五月',
+					// 		'六月',
+					// 		'七月',
+					// 		'八月',
+					// 		'九月',
+					// 		'十月',
+					// 		'十一月',
+					// 		'十二月'
+					// 	],
+					// 	monthNamesShort: [
+					// 		'一月',
+					// 		'二月',
+					// 		'三月',
+					// 		'四月',
+					// 		'五月',
+					// 		'六月',
+					// 		'七月',
+					// 		'八月',
+					// 		'九月',
+					// 		'十月',
+					// 		'十一月',
+					// 		'十二月'
+					// 	],
+					// 	dayNames: [
+					// 		'星期日',
+					// 		'星期一',
+					// 		'星期二',
+					// 		'星期三',
+					// 		'星期四',
+					// 		'星期五',
+					// 		'星期六'
+					// 	],
+					// 	dayNamesShort: [
+					// 		'周日',
+					// 		'周一',
+					// 		'周二',
+					// 		'周三',
+					// 		'周四',
+					// 		'周五',
+					// 		'周六'
+					// 	],
+					// 	dayNamesMin: [
+					// 		'周日',
+					// 		'周一',
+					// 		'周二',
+					// 		'周三',
+					// 		'周四',
+					// 		'周五',
+					// 		'周六'
+					// 	]
+					// });
+					var datePicker = ts.ui.DatePicker({
+						title: "Your Birthday",
+						value: '1983-03-26',
+						min: '1983-01-01',
+						max: '1985-12-24',
+						onselect: function(newval, oldval) {
+							ts.ui.Notification.success(this.value);
+							this.close();
+						},
+						onclosed: function() {
+							this.dispose();
+						}
+					});
+					datePicker.open();
+				};
+
+				var notice_success = function(){
+					ts.ui.Notification.success("you did it");
+				};
+
+				var notice_info = function(){
+					var text = "Choose link (one)[ONE] or (two)[TWO]";
+					var note = ts.ui.Notification.info(text);
+					note.onlink = function(url){
+						note.accept().then(function onfadeout() {
+							ts.ui.Notification.success(url);
+						});
+					};
+					note.onaccept = function(){
+						ts.ui.Notification.success("you accept the information");
+					};
+				};
+
+				var notice_warning = function(){
+					ts.ui.Notification.warning("you are being watched it");
+				};
+
+				var notice_error = function(){
+					var text = "you are (wrong)[http://wwww.tradeshift.com]";
+					var note = ts.ui.Notification.error(text);
+					note.onlink = function(url){
+						note.accept().then(function onfadeout() {
+							ts.ui.Notification.success(url);
+						});
+					};
+				};
+
+				var show_topbar = function(){
+					console.log("top bar");
+					ts.ui.TopBar.title('Hello World');
+				};
+
+				var navigate_topbar = function(){
+					ts.ui.TopBar.showBack(function() {
+						console.log('Back');
+					}).showNext(function() {
+						console.log('Next');
+					});
+				};
+
+				var topbar_tab = function(){
+					ts.ui.TopBar.tabs([
+						{
+							label: 'Tab One',
+							id: 'example_tab',
+							onselect: function() {
+								console.log("tab one is selected");
+							}
+						},
+						{
+							label: 'Tab Two',
+							onselect : function() {
+								console.log("tab two is selected");
+							}
+						}
+					]);
+				};
+
+				var add_tab = function(){
+					ts.ui.TopBar.tabs().push ({
+						label: "Bonus Tab",
+						onselect : function() {
+							ts.ui.Notification.success(this.label);
+						}
+					});
+				};
+
+				var select_tab = function(){
+					var tab = ts.ui.TopBar.tabs().get("example_tab");
+					tab.counter = Math.ceil(Math.random() * 10);
+				};
+
+				var topbar_button = function(){
+					ts.ui.TopBar.buttons([
+						{
+							label : "Primary",
+							type : "ts-primary",
+							onclick: function() {
+								ts.ui.Notification.success(this.label);
+							}
+						},
+						{
+							label : "Secondary",
+							type : "ts-secondary"
+						},
+						{
+							label : "Tertiary One"
+						},
+						{
+							label : "Tertiary Two"
+						}	
+					]);
+				};
+
+				var add_button = function(){
+					var buttons = ts.ui.TopBar.buttons();
+					buttons.push({
+						id: 'example-button',
+						type: 'ts-primary',
+						label: 'Click Me...'
+					});
+					var button = buttons.get('example-button');
+					button.onclick = function() {
+						this.label = 'Thanks!';
+					};
+				};
+
+				var disable_button = function(){
+					ts.ui.TopBar.buttons().forEach(function(button) {
+						if(button.disabled) {
+							button.enable();
+						} else {
+							button.disable();
+						}
+					});
+				};
+
+				function debug(e) {
+					console.log(e.type, e.target);
+				}
+				var init_events = function(){
+					document.getElementById("btn-show-drawer").addEventListener("click", show_drower);
+					document.getElementById("btn-close-drawer").addEventListener("click", close_drower);
+					document.getElementById("btn-toggle-drawer").addEventListener("click", toggle_drower);
+					document.getElementById("btn-show-aside").addEventListener("click", aside_demo);
+					document.getElementById("btn-add-header").addEventListener("click", add_header);
+					document.getElementById("btn-toolbar-title").addEventListener("click", toolbar_title);
+					document.getElementById("btn-toolbar-search").addEventListener("click", toolbar_search);
+					document.getElementById("btn-toolbar-button").addEventListener("click", toolbar_button);
+					document.getElementById("btn-date-picker").addEventListener("click", date_picker_demo);
+					document.getElementById("btn-notice-success").addEventListener("click", notice_success);
+					document.getElementById("btn-notice-info").addEventListener("click", notice_info);
+					document.getElementById("btn-notice-warning").addEventListener("click", notice_warning);
+					document.getElementById("btn-notice-error").addEventListener("click", notice_error);
+					document.getElementById("btn-show-topbar").addEventListener("click", show_topbar);
+					document.getElementById("btn-navigate-topbar").addEventListener("click", navigate_topbar);
+					document.getElementById("btn-topbar-tabs").addEventListener("click", topbar_tab);
+					document.getElementById("btn-add-tabs").addEventListener("click", add_tab);
+					document.getElementById("btn-select-tab").addEventListener("click", select_tab);
+					document.getElementById("btn-topbar-buttons").addEventListener("click", topbar_button);
+					document.getElementById("btn-add-button").addEventListener("click", add_button);
+					document.getElementById("btn-disable-button").addEventListener("click", disable_button);
+					document.addEventListener('ts-open', debug);
+					document.addEventListener('ts-opened', debug);
+					document.addEventListener('ts-close', debug);
+					document.addEventListener('ts-closed', debug);
+					document.getElementById("btn-show-card").addEventListener("click",card_demo);
+				};
+				init_events();
+				
+			});
+	</script>
+</body>
+</html>
